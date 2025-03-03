@@ -10,87 +10,96 @@
     width: 210mm;
     height: 280mm;
     background: white;
-    display: flex;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Sidebar */
-  .sidebar {
-    width: 30%;
-    background: #2b3235;
-    color: white;
     padding: 30px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header {
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 15px;
   }
   
   .name {
-    font-size: 26px;
+    font-size: 28px;
     font-weight: bold;
-    text-align: center;
   }
   
   .title {
     font-size: 18px;
     font-weight: 600;
-    text-align: center;
-    margin-bottom: 20px;
-    color: #ffffff;
+    margin-bottom: 10px;
+    color: white;
   }
   
   .contactInfo {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
     font-size: 14px;
-    color: #ffffff;
+    font-weight: bold;
   }
   
-  .contactInfo p {
-    margin: 5px 0;
-    color: #ffffff;
+  .contactInfo span {
+    display: inline-block;
   }
   
   .contactInfo a {
     text-decoration: none;
-    color: #ffffff;
+    color: white;
     font-weight: bold;
   }
   
   .contactInfo a:hover {
     text-decoration: underline;
-    color: #ffffff;
   }
   
-  /* Main Content */
-  .mainContent {
-    width: 70%;
-    padding: 30px;
+  .line {
+    width: 100%;
+    margin: 5px auto;
+    border: 1px solid black;
+  }
+  
+  /* Content Section */
+  .content {
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
-  }
-  
-  .recipientSection {
-    font-size: 16px;
-    margin-bottom: 20px;
-  }
-  
-  .recipientSection p {
-    margin: 3px 0;
-  }
-  
-  .letterContent {
+    margin-top: 20px;
     flex-grow: 1;
+  }
+  
+  .leftColumn {
+    width: 40%;
+    text-align: left;
+    
+  }
+  
+  .leftColumn p {
+    margin: 5px 0;
+   
+  }
+  
+  /* Right Column */
+  .rightColumn {
+    width: 80%;
     text-align: justify;
     font-size: 16px;
     line-height: 1.6;
+    margin-left: -20px;
   }
   
+  /* Footer */
   .footer {
+    margin-top: auto;
+    margin-bottom: 40px;
     text-align: left;
-    font-size: 16px;
-    margin-top: 20px;
+    padding-top: 30px;
   }
   
   .signature {

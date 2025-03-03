@@ -330,6 +330,14 @@ const templates = [
     withPhoto: false,
     columns: 2,
   },
+  {
+    id: 55,
+    title: "Template 55",
+    image:
+      "https://res.cloudinary.com/dajopw7zz/image/upload/v1739804921/NextStepCv/template37.jpg",
+    withPhoto: false,
+    columns: 2,
+  },
 ];
 
 const colors = [
@@ -405,7 +413,7 @@ const TemplatePage = () => {
           <label>
             <input
               type="checkbox"
-              checked={filters.columns === 1}
+              checked={filters.columns === 1} 
               onChange={() => handleColumnFilterChange(1)}
             />
             1 Column
