@@ -4,7 +4,7 @@ import { FaEnvelope, FaPhone, FaGithub, FaLinkedin } from "react-icons/fa";
 import "../multiPage.css";
 
 const Template37 = forwardRef(({ information, sections, activeColor }, ref) => {
-  /*const info = {
+  const info = {
     basicInfo: information[sections.basicInfo]?.detail || {},
     workExp: information[sections.workExp]?.details || [],
     education: information[sections.education]?.details || [],
@@ -14,8 +14,9 @@ const Template37 = forwardRef(({ information, sections, activeColor }, ref) => {
     languages: information[sections.languages]?.points || [],
     summary: information[sections.summary]?.detail || "",
     other: information[sections.other]?.points || [],
-  };*/
- const [info, setInfo] = useState({
+  };
+
+/* const [info, setInfo] = useState({
     basicInfo: {
       name: "John Doe",
       title: "Frontend Developer | React.js Specialist",
@@ -111,7 +112,7 @@ const Template37 = forwardRef(({ information, sections, activeColor }, ref) => {
       "guiding aspiring developers in mastering React.js and JavaScript fundamentals.",
       " Passionate about open-source contributions and active in the web development community.",
     ],
-  });
+  });*/
 
   const getInitials = (name) => {
     if (!name) return "";

@@ -8,7 +8,7 @@ const Template1 = forwardRef(({ information, sections }, ref) => {
     education: information[sections.education]?.details || [],
     achievements: information[sections.achievement]?.points || [],
     skills: information[sections.skills]?.points || [],
-    projects: information[sections.projects]?.details || [],
+    projects: information[sections.project]?.details || [],
     summary: information[sections.summary]?.detail || "",
   };
 
@@ -95,7 +95,9 @@ const Template1 = forwardRef(({ information, sections }, ref) => {
               {info.projects.map((project, index) => (
                 <div key={index} className={styles.project}>
                   <h4>{project.title}</h4>
-                  
+
+                  {project.overview && <p>{project.overview}</p>}
+
                   {project.github && (
                     <p>
                       <strong>GitHub:</strong>{" "}
@@ -114,15 +116,19 @@ const Template1 = forwardRef(({ information, sections }, ref) => {
                     </p>
                   )}
 
-                  <ul>
-                    {project.overview?.map((point, i) => (
-                      <li key={i}>{point}</li>
-                    ))}
-                  </ul>
+                  {project.points?.length > 0 && (
+                    <div>
+                      <strong>Description:</strong>
+                      <ul>
+                        {project.points.map((point, i) => (
+                          <li key={i}>{point}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                 </div>
               ))}
             </section>
-
           </div>
         </div>
 

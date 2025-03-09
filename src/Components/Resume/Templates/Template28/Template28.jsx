@@ -3,19 +3,19 @@ import styles from "./Template28.module.css";
 import { FaLinkedin, FaGithub, FaPhone, FaEnvelope } from "react-icons/fa";
 
 const Template28 = forwardRef(({ information, sections, activeColor }, ref) => {
-  // const info = {
-  //   basicInfo: information[sections.basicInfo]?.detail || {},
-  //   workExp: information[sections.workExp]?.details || [],
-  //   education: information[sections.education]?.details || [],
-  //   projects: information[sections.project]?.details || [],
-  //   achievements: information[sections.achievement]?.points || [],
-  //   skills: information[sections.skills]?.points || [],
-  //   languages: information[sections.languages]?.points || [],
-  //   summary: information[sections.summary]?.detail || "",
-  //   other: information[sections.other]?.other || "",
-  // };
+  const info = {
+    basicInfo: information[sections.basicInfo]?.detail || {},
+    workExp: information[sections.workExp]?.details || [],
+    education: information[sections.education]?.details || [],
+    projects: information[sections.project]?.details || [],
+    achievements: information[sections.achievement]?.points || [],
+    skills: information[sections.skills]?.points || [],
+    languages: information[sections.languages]?.points || [],
+    summary: information[sections.summary]?.detail || "",
+    other: information[sections.other]?.other || "",
+  };
 
-  const [info, setInfo] = useState({
+ /* const [info, setInfo] = useState({
     basicInfo: {
       name: "John Doe",
       title: "Frontend Developer | React.js Specialist",
@@ -106,7 +106,7 @@ const Template28 = forwardRef(({ information, sections, activeColor }, ref) => {
     other:
       "Volunteered as a mentor for coding bootcamps, guiding aspiring developers in mastering React.js and JavaScript fundamentals. Passionate about open-source contributions and active in the web development community.",
   });
-
+*/
   // Extract first letter of the name
 
   const initial = info.basicInfo.name

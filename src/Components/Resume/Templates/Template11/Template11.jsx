@@ -3,7 +3,7 @@ import styles from "./Template11.module.css";
 import { FaLinkedin, FaGithub, FaPhone, FaEnvelope } from "react-icons/fa";
 
 const Template11 = forwardRef(({ information, sections, activeColor }, ref) => {
-  /*const info = {
+  const info = {
     basicInfo: information[sections.basicInfo]?.detail || {},
     workExp: information[sections.workExp]?.details || [],
     education: information[sections.education]?.details || [],
@@ -14,8 +14,8 @@ const Template11 = forwardRef(({ information, sections, activeColor }, ref) => {
     summary: information[sections.summary]?.detail || "",
     other: information[sections.other]?.other || "",
   };
-*/
-const [info, setInfo] = useState({
+
+/*const [info, setInfo] = useState({
     basicInfo: {
       name: "John Doe",
       title: "Frontend Developer",
@@ -74,7 +74,7 @@ const [info, setInfo] = useState({
     summary: "Experienced frontend developer specializing in React.js. Experienced frontend developer specializing in React.js",
     other: "Volunteered as a mentor for coding bootcamps.",
   });
-  
+  */
 
 
   // Extract first letter of the name

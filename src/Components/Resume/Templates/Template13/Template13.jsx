@@ -4,7 +4,7 @@ import { FaLinkedin, FaGithub, FaPhone, FaEnvelope } from "react-icons/fa";
 
 const Template13 = forwardRef(({ information, sections, activeColor }, ref) => {
   
-    /*const info = {
+    const info = {
         basicInfo: information[sections.basicInfo]?.detail || {},
         workExp: information[sections.workExp]?.details || [],
         education: information[sections.education]?.details || [],
@@ -15,8 +15,8 @@ const Template13 = forwardRef(({ information, sections, activeColor }, ref) => {
         summary: information[sections.summary]?.detail || "",
         other: information[sections.other]?.other || "",
       };
-    */
-    const [info, setInfo] = useState({
+    
+    /*const [info, setInfo] = useState({
       basicInfo: {
         name: "John Doe",
         title: "Frontend Developer | React.js Specialist",
@@ -97,7 +97,7 @@ const Template13 = forwardRef(({ information, sections, activeColor }, ref) => {
       other: "Volunteered as a mentor for coding bootcamps, guiding aspiring developers in mastering React.js and JavaScript fundamentals. Passionate about open-source contributions and active in the web development community."
       });
       
-    
+    */
     
       // Extract first letter of the name
       const initial = info.basicInfo.name ? info.basicInfo.name.charAt(0).toUpperCase() : "";

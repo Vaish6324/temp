@@ -3,19 +3,19 @@ import styles from "./Template27.module.css";
 import backgroundImage from "./background.png"; // Store background image in Template15 folder
 
 const Template15 = forwardRef(({ information, sections, activeColor }, ref) => {
-  //   const info = {
-  //     basicInfo: information[sections.basicInfo]?.detail || {},
-  //     workExp: information[sections.workExp]?.details || [],
-  //     education: information[sections.education]?.details || [],
-  //     projects: information[sections.project]?.details || [],
-  //     achievements: information[sections.achievement]?.points || [],
-  //     skills: information[sections.skills]?.points || [],
-  //     languages: information[sections.languages]?.points || [],
-  //     summary: information[sections.summary]?.detail || "",
-  //     other: information[sections.other]?.points || [],
-  //   };
+    const info = {
+      basicInfo: information[sections.basicInfo]?.detail || {},
+      workExp: information[sections.workExp]?.details || [],
+      education: information[sections.education]?.details || [],
+      projects: information[sections.project]?.details || [],
+      achievements: information[sections.achievement]?.points || [],
+      skills: information[sections.skills]?.points || [],
+      languages: information[sections.languages]?.points || [],
+      summary: information[sections.summary]?.detail || "",
+      other: information[sections.other]?.points || [],
+    };
 
-  const [info, setInfo] = useState({
+  /*const [info, setInfo] = useState({
     basicInfo: {
       name: "John Doe",
       title: "Frontend Developer | React.js Specialist",
@@ -105,7 +105,7 @@ const Template15 = forwardRef(({ information, sections, activeColor }, ref) => {
       "guiding aspiring developers in mastering React.js and JavaScript fundamentals.",
       " Passionate about open-source contributions and active in the web development community.",
     ],
-  });
+  });*/
 
   return (
     <div className={styles.resumeContainer}>

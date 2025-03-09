@@ -1,24 +1,32 @@
 .resumeContainer {
-    display: flex;
-    max-width: 210mm;
-    height: 297mm;
-    margin: 30px auto;
-    background: #fff;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    font-family: 'Poppins', sans-serif;
-    page-break-inside: avoid; /* For printing */
-  }
-  
-  .leftSection {
-    width: 35%;
-    background: var(--theme-color);
-    color: #fff;
-    padding: 25px;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-  }
-  
+  display: flex;
+  max-width: 210mm; /* Increase width */
+  height: 280mm;
+  margin: 30px auto;
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  font-family: 'Poppins', sans-serif;
+  page-break-inside: avoid; /* For printing */
+}
+
+.leftSection {
+  width: 30%; /* Reduce left section width */
+  background: var(--theme-color);
+  color: #fff;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.rightSection {
+  width: 70%; /* Increase right section width */
+  padding: 30px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
   .profile h1 {
     font-size: 28px;
     margin-bottom: 5px;
@@ -57,14 +65,7 @@
     padding: 15px;
     border-radius: 5px;
   }
-  
-  .rightSection {
-    width: 65%;
-    padding: 25px 35px;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-  }
+
   
   .rightSection h3 {
     font-size: 22px;

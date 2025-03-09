@@ -1,3 +1,4 @@
+/* Resume Container */
 .resumeContainer {
   display: flex;
   justify-content: center;
@@ -17,11 +18,18 @@
 
 /* Header */
 .header {
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 20px;
 }
 
-.header h1 {
+/* Name & Title (Left Side) */
+.nameTitle {
+  text-align: left;
+}
+
+.nameTitle h1 {
   font-size: 2.5rem;
   font-weight: 600;
   color: #333;
@@ -33,10 +41,21 @@
   margin-top: -10px;
 }
 
+/* Contact Info (Right Side) */
 .contactInfo {
+  text-align: right;
   font-size: 0.9rem;
   color: #666;
-  margin-top: 10px;
+}
+
+.contactInfo ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contactInfo li {
+  margin-bottom: 5px;
 }
 
 .contactInfo a {
@@ -78,6 +97,10 @@ p {
 }
 
 /* Skills */
+.skillsSection {
+  margin-top: 15px;
+}
+
 .skillList {
   display: flex;
   flex-wrap: wrap;
@@ -95,6 +118,10 @@ p {
 }
 
 /* Projects */
+.project {
+  margin-top: 15px;
+}
+
 .project h4 {
   font-size: 1.2rem;
   color: #222;

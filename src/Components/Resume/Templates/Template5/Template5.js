@@ -9,7 +9,7 @@ const Template5 = forwardRef(({ information, sections }, ref) => {
     education: information[sections.education]?.details || [],
     achievements: information[sections.achievement]?.points || [],
     skills: information[sections.skills]?.points || [],
-    projects: information[sections.projects]?.details || [],
+    projects: information[sections.project]?.details || [],
     summary: information[sections.summary]?.detail || "",
   };
 
@@ -94,38 +94,44 @@ const Template5 = forwardRef(({ information, sections }, ref) => {
             </section>
 
             {/* Projects Section */}
-            <section className={styles.section}>
-              <h2>Projects</h2>
-              {info.projects.map((project, index) => (
-                <div key={index} className={styles.project}>
-                  <h4>{project.title}</h4>
-                  
-                  {project.github && (
-                    <p>
-                      <strong>GitHub:</strong>{" "}
-                      <a href={project.github} target="_blank" rel="noreferrer">
-                        {project.github}
-                      </a>
-                    </p>
-                  )}
+<section className={styles.section}>
+  <h2>Projects</h2>
+  {info.projects.map((project, index) => (
+    <div key={index} className={styles.project}>
+      <h4>{project.title}</h4>
 
-                  {project.link && (
-                    <p>
-                      <strong>Live Demo:</strong>{" "}
-                      <a href={project.link} target="_blank" rel="noreferrer">
-                        {project.link}
-                      </a>
-                    </p>
-                  )}
+      {project.points?.length > 0 && (
+        <div>
+          <strong>Description:</strong>
+          <ul>
+            {project.points.map((point, i) => (
+              <li key={i}>{point}</li>
+            ))}
+          </ul>
+        </div>
+      )}
 
-                  <ul>
-                    {project.overview?.map((point, i) => (
-                      <li key={i}>{point}</li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </section>
+      {project.github && (
+        <p>
+          <strong>GitHub:</strong>{" "}
+          <a href={project.github} target="_blank" rel="noreferrer">
+            {project.github}
+          </a>
+        </p>
+      )}
+
+      {project.link && (
+        <p>
+          <strong>Live Demo:</strong>{" "}
+          <a href={project.link} target="_blank" rel="noreferrer">
+            {project.link}
+          </a>
+        </p>
+      )}
+    </div>
+  ))}
+</section>
+
           </div>
         </div>
 

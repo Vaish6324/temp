@@ -154,7 +154,7 @@ const Template31 = forwardRef(({ information, sections, activeColor }, ref) => {
         </div>
       </div>
     </div>
-  );
+  ); 
 });
 
 export default Template31;

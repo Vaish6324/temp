@@ -3,7 +3,7 @@ import styles from "./Template16.module.css";
 import backgroundImage from "./background.png"; // Store background image in Template15 folder
 
 const Template16 = forwardRef(({ information, sections, activeColor }, ref) => {
-  /*const info = {
+  const info = {
     basicInfo: information[sections.basicInfo]?.detail || {},
     workExp: information[sections.workExp]?.details || [],
     education: information[sections.education]?.details || [],
@@ -14,8 +14,8 @@ const Template16 = forwardRef(({ information, sections, activeColor }, ref) => {
     summary: information[sections.summary]?.detail || "",
     other: information[sections.other]?.points || [],
   };
-*/
-  const [info, setInfo] = useState({
+
+ /* const [info, setInfo] = useState({
          basicInfo: {
            name: "John Doe",
            title: "Frontend Developer | React.js Specialist",
@@ -82,7 +82,7 @@ const Template16 = forwardRef(({ information, sections, activeColor }, ref) => {
          summary: "Experienced Frontend Developer with expertise in React.js, Next.js, and UI/UX optimization. Passionate about building high-performance web applications with clean and scalable code. Strong problem-solving skills, team leadership experience, and a commitment to continuous learning.",
          other:[ "Volunteered as a mentor for coding bootcamps", "guiding aspiring developers in mastering React.js and JavaScript fundamentals."," Passionate about open-source contributions and active in the web development community."],
          });
- 
+ */
 
 
   return (

@@ -6,7 +6,8 @@ const Template6 = forwardRef(({ information, sections, activeColor }, ref) => {
     basicInfo: information[sections.basicInfo]?.detail || {},
     workExperience: information[sections.workExp]?.details || [],
     education: information[sections.education]?.details || [],
-    projects: information[sections.project]?.details || [],
+    projects: information[sections.project]?.details.length
+      ? information[sections.project]?.details:[],
     achievements: information[sections.achievement]?.points || [],
     skills: information[sections.skills]?.points || [],
     languages: information[sections.languages]?.points || [],
@@ -17,7 +18,6 @@ const Template6 = forwardRef(({ information, sections, activeColor }, ref) => {
   return (
     <div className={styles.resumeContainer} ref={ref}>
       <div className={styles.resume} style={{ "--theme-color": activeColor }}>
-
         {/* Name & Title Section */}
         <header className={styles.header}>
           <h1>{info.basicInfo.name || "Your Name"}</h1>
@@ -37,10 +37,28 @@ const Template6 = forwardRef(({ information, sections, activeColor }, ref) => {
               {info.basicInfo.phone && <p>📞 {info.basicInfo.phone}</p>}
               {info.basicInfo.email && <p>✉️ {info.basicInfo.email}</p>}
               {info.basicInfo.linkedin && (
-                <p>🔗 <a href={info.basicInfo.linkedin} target="_blank" rel="noreferrer">{info.basicInfo.linkedin}</a></p>
+                <p>
+                  🔗{" "}
+                  <a
+                    href={info.basicInfo.linkedin}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {info.basicInfo.linkedin}
+                  </a>
+                </p>
               )}
               {info.basicInfo.github && (
-                <p>🐙 <a href={info.basicInfo.github} target="_blank" rel="noreferrer">{info.basicInfo.github}</a></p>
+                <p>
+                  🐙{" "}
+                  <a
+                    href={info.basicInfo.github}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {info.basicInfo.github}
+                  </a>
+                </p>
               )}
             </div>
 
@@ -49,7 +67,9 @@ const Template6 = forwardRef(({ information, sections, activeColor }, ref) => {
               <h2>Skills</h2>
               <div className={styles.skillsContainer}>
                 {info.skills.map((skill, index) => (
-                  <span key={index} className={styles.skillChip}>{skill}</span>
+                  <span key={index} className={styles.skillChip}>
+                    {skill}
+                  </span>
                 ))}
               </div>
             </div>
@@ -59,7 +79,9 @@ const Template6 = forwardRef(({ information, sections, activeColor }, ref) => {
               <h2>Languages</h2>
               <div className={styles.languagesContainer}>
                 {info.languages.map((language, index) => (
-                  <span key={index} className={styles.languageChip}>{language}</span>
+                  <span key={index} className={styles.languageChip}>
+                    {language}
+                  </span>
                 ))}
               </div>
             </div>
@@ -79,7 +101,8 @@ const Template6 = forwardRef(({ information, sections, activeColor }, ref) => {
               <h2>Education</h2>
               {info.education.map((edu, index) => (
                 <p key={index}>
-                  <strong>{edu.title}</strong> at {edu.college} ({edu.startDate} - {edu.endDate})
+                  <strong>{edu.title}</strong> at {edu.college} ({edu.startDate} -{" "}
+                  {edu.endDate})
                 </p>
               ))}
             </div>
@@ -101,7 +124,10 @@ const Template6 = forwardRef(({ information, sections, activeColor }, ref) => {
               <h2>Work Experience</h2>
               {info.workExperience.map((job, index) => (
                 <div key={index} className={styles.job}>
-                  <p><strong>{job.title}</strong> - {job.companyName} ({job.startDate} - {job.endDate})</p>
+                  <p>
+                    <strong>{job.title}</strong> - {job.companyName} (
+                    {job.startDate} - {job.endDate})
+                  </p>
                   <ul>
                     {job.points.map((point, i) => (
                       <li key={i}>{point}</li>
@@ -111,32 +137,47 @@ const Template6 = forwardRef(({ information, sections, activeColor }, ref) => {
               ))}
             </div>
 
-            {/* Projects Section */}
-            <div className={styles.section}>
-              <h2>Projects</h2>
-              {info.projects.map((project, index) => (
-                <div key={index} className={styles.project}>
-                  <h4>{project.title}</h4>
-                  {project.github && (
-                    <p>
-                      <strong>GitHub:</strong>{" "}
-                      <a href={project.github} target="_blank" rel="noreferrer">{project.github}</a>
-                    </p>
-                  )}
-                  {project.link && (
-                    <p>
-                      <strong>Live Demo:</strong>{" "}
-                      <a href={project.link} target="_blank" rel="noreferrer">{project.link}</a>
-                    </p>
-                  )}
-                  <ul>
-                    {project.points.map((point, i) => (
-                      <li key={i}>{point}</li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
+           {/* Projects Section */}
+<div className={styles.section}>
+  <h2>Projects</h2>
+  {info.projects.map((project, index) => (
+    <div key={index} className={styles.project}>
+      <h4>{project.title}</h4>
+
+      {project.overview && <p>{project.overview}</p>}
+
+      {project.github && (
+        <p>
+          <strong>GitHub:</strong>{" "}
+          <a href={project.github} target="_blank" rel="noreferrer">
+            {project.github}
+          </a>
+        </p>
+      )}
+
+      {project.link && (
+        <p>
+          <strong>Live Demo:</strong>{" "}
+          <a href={project.link} target="_blank" rel="noreferrer">
+            {project.link}
+          </a>
+        </p>
+      )}
+
+      {project.points?.length > 0 && (
+        <div>
+          <strong>Description:</strong>
+          <ul>
+            {project.points.map((point, i) => (
+              <li key={i}>{point}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </div>
+  ))}
+</div>
+
           </div>
         </div>
 

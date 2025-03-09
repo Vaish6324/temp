@@ -4,7 +4,7 @@ import "../multiPage.css";
 
 
 const Template24 = forwardRef(({ information, sections, activeColor }, ref) => {
-  /*const info = {
+  const info = {
     basicInfo: information[sections.basicInfo]?.detail || {},
     workExp: information[sections.workExp]?.details || [],
     education: information[sections.education]?.details || [],
@@ -15,9 +15,9 @@ const Template24 = forwardRef(({ information, sections, activeColor }, ref) => {
     summary: information[sections.summary]?.detail || "",
     other: information[sections.other]?.points || [],
   };
-*/
 
-  const [info, setInfo] = useState({
+
+ /* const [info, setInfo] = useState({
     basicInfo: {
       name: "John Doe",
       title: "Frontend Developer | React.js Specialist",
@@ -121,7 +121,7 @@ const Template24 = forwardRef(({ information, sections, activeColor }, ref) => {
       ? nameParts[0][0].toUpperCase() + nameParts[1][0].toUpperCase()
       : nameParts[0][0].toUpperCase();
   };
-  
+  */
   return (
     <div className={styles.resumeContainer}>
     <div

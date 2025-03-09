@@ -8,7 +8,7 @@ const Template3 = forwardRef(({ information, sections }, ref) => {
     education: information[sections.education]?.details || [],
     achievements: information[sections.achievement]?.points || [],
     skills: information[sections.skills]?.points || [],
-    projects: information[sections.projects]?.details || [],
+    projects: information[sections.project]?.details || [],
     summary: information[sections.summary]?.detail || "",
   };
 
@@ -17,19 +17,28 @@ const Template3 = forwardRef(({ information, sections }, ref) => {
       <div className={styles.resume}>
         {/* Header Section */}
         <header className={styles.header}>
-          <h1>{info.basicInfo.name || "Your Name"}</h1>
-          <p className={styles.title}>{info.basicInfo.title || "Your Position"}</p>
+          {/* Name & Title (Left Side) */}
+          <div className={styles.nameTitle}>
+            <h1>{info.basicInfo.name || "Your Name"}</h1>
+            <p className={styles.title}>{info.basicInfo.title || "Your Position"}</p>
+          </div>
 
-          {/* Contact Info in One Line */}
+          {/* Contact Information (Right Side) */}
           <div className={styles.contactInfo}>
-            {info.basicInfo.email && <span>✉️ {info.basicInfo.email} | </span>}
-            {info.basicInfo.phone && <span>📞 {info.basicInfo.phone} | </span>}
-            {info.basicInfo.linkedin && (
-              <span>🔗 <a href={info.basicInfo.linkedin} target="_blank" rel="noreferrer">LinkedIn</a> | </span>
-            )}
-            {info.basicInfo.github && (
-              <span>🐙 <a href={info.basicInfo.github} target="_blank" rel="noreferrer">GitHub</a></span>
-            )}
+            <ul>
+              {info.basicInfo.email && <li>✉️ {info.basicInfo.email}</li>}
+              {info.basicInfo.phone && <li>📞 {info.basicInfo.phone}</li>}
+              {info.basicInfo.linkedin && (
+                <li>
+                  🔗 <a href={info.basicInfo.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
+                </li>
+              )}
+              {info.basicInfo.github && (
+                <li>
+                  🐙 <a href={info.basicInfo.github} target="_blank" rel="noreferrer">GitHub</a>
+                </li>
+              )}
+            </ul>
           </div>
         </header>
 
@@ -84,7 +93,7 @@ const Template3 = forwardRef(({ information, sections }, ref) => {
           </ul>
         </section>
 
-        {/* Projects */}
+        {/* Projects (Fixed Section) */}
         <section>
           <div className={styles.sectionTitle}>Projects <span className={styles.line}></span></div>
           {info.projects.map((project, index) => (
@@ -109,11 +118,16 @@ const Template3 = forwardRef(({ information, sections }, ref) => {
                 </p>
               )}
 
-              <ul>
-                {project.overview?.map((point, i) => (
-                  <li key={i}>{point}</li>
-                ))}
-              </ul>
+              {project.points?.length > 0 && (
+                <div>
+                  <strong>Description:</strong>
+                  <ul>
+                    {project.points.map((point, i) => (
+                      <li key={i}>{point}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </div>
           ))}
         </section>

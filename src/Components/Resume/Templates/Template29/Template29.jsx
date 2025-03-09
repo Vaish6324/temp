@@ -2,20 +2,20 @@ import React, { forwardRef, useState } from "react";
 import styles from "./Template29.module.css";
 
 const Template29 = forwardRef(({ information, sections }, ref) => {
-  //   const info = {
-  //     basicInfo: information[sections.basicInfo]?.detail || {},
-  //     workExp: information[sections.workExp]?.details || [],
-  //     education: information[sections.education]?.details || [],
-  //     projects: information[sections.project]?.details || [],
-  //     achievements: information[sections.achievement]?.points || [],
-  //     skills: information[sections.skills]?.points || [],
-  //     languages: information[sections.languages]?.points || [],
-  //     summary: information[sections.summary]?.detail || "",
-  //     other: information[sections.other]?.other || "",
-  //     certifications: information[sections.certifications]?.points || [],
-  //   };
+    const info = {
+      basicInfo: information[sections.basicInfo]?.detail || {},
+      workExp: information[sections.workExp]?.details || [],
+      education: information[sections.education]?.details || [],
+      projects: information[sections.project]?.details || [],
+      achievements: information[sections.achievement]?.points || [],
+      skills: information[sections.skills]?.points || [],
+      languages: information[sections.languages]?.points || [],
+      summary: information[sections.summary]?.detail || "",
+      other: information[sections.other]?.other || "",
+      certifications: information[sections.certifications]?.points || [],
+    };
 
-  const [info, setInfo] = useState({
+  /*const [info, setInfo] = useState({
     basicInfo: {
       name: "John Doe",
       title: "Frontend Developer | React.js Specialist",
@@ -121,6 +121,8 @@ const Template29 = forwardRef(({ information, sections }, ref) => {
       "Received “Excellence” in Financial Management Award, Borcelle Corporation.",
     ],
   });
+*/
+
   return (
     <div className={styles["resume-container"]} ref={ref}>
       {/* Left Panel */}
