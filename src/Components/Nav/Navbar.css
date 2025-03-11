@@ -179,3 +179,16 @@
     }
   }
   
+  .dropdown-menu a {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between image and text */
+    padding: 10px 20px;
+  }
+  
+  .dropdown-icon-img {
+    width: 20px; /* Adjust as needed */
+    height: 20px;
+    object-fit: contain;
+  }
+  
