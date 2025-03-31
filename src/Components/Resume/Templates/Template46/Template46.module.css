@@ -1,0 +1,242 @@
+/* Resume Container */
+.resumeContainer {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    background-color: #f4f4f4;
+  }
+  
+  .resume {
+    width: 210mm;
+    background: #001f3f; /* Navy Blue Background */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff; /* Ensures text is readable */
+  }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #f4f4f4; /* Light color for contrast */
+    text-transform: uppercase;
+  }
+  
+  .title {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #ccc; /* Softer light color */
+    margin-top: 8px;
+  }
+  
+  .contactInfo {
+    font-size: 1rem;
+    color: #ddd; /* Light gray for readability */
+    margin-top: 10px;
+    line-height: 1.5;
+  }
+  
+  .contactInfo a {
+    color: #1e90ff; /* Light blue for links */
+    text-decoration: none;
+  }
+  
+  .contactInfo a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Section Styling */
+  section {
+    margin-top: 30px;
+  }
+  
+  h2 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ffffffd5; /* Black color for headings */
+    background-color: 
+    #fdfffc27; /* Contrast color for section headers */
+    padding: 10px;
+    margin: 20px 0;
+  
+    border-radius: 5px;
+  }
+  
+  
+  /* Summary Section */
+  .summary-section {
+    margin: 20px 0;
+  }
+  
+  .summary-heading {
+    font-size: 1.5rem;
+    color: #333333; /* Darker color for the heading */
+    margin-bottom: 10px;
+  }
+  
+  .summary-text {
+    color: #ffffff; /* Pure white color for the text */
+    line-height: 1.6; /* Improves readability */
+    font-size: 1rem; /* Standard font size */
+    margin-top: 10px; /* Adds spacing above the text */
+  }
+  
+  
+  
+  
+  
+  /* Experience */
+  .experienceItem {
+    margin-bottom: 15px;
+  }
+  
+  .experienceItem strong {
+    font-size: 1.1rem;
+    color: #f4f4f4;
+  }
+  
+  ul {
+    padding-left: 25px;
+    margin-top: 10px;
+  }
+  
+  ul li {
+    font-size: 1rem;
+    color: #ddd;
+    line-height: 1.6;
+  }
+  
+  .experienceTitle {
+    color: #f4f4f4;
+    font-weight: bold;
+  }
+  
+  /* Work Experience Description */
+  .experienceItem ul li {
+    color: white; /* Ensure work description text is white */
+    line-height: 1.6; /* Optional: Adjust line height for readability */
+  }
+  
+  
+  /* Education */
+  .educationItem {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #ddd;
+  }
+  
+  .educationTitle {
+    color: #f4f4f4;
+    font-weight: bold;
+  }
+  
+  /* Skills */
+  .skillsSection {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .skillList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .skillList li {
+    background:  #e6eae527;
+    color: rgb(255, 255, 255);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    text-align: center;
+    font-weight: 500;
+  }
+  
+  /* Languages */
+  .languagesSection {
+    margin-top: 20px;
+  }
+  
+  .languageList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .languageList li {
+    background:  #e6eae527;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    text-align: center;
+    font-weight: 500;
+  }
+  
+  /* Achievements */
+  .achievements ul {
+    list-style-type: disc;
+    padding-left: 25px;
+  }
+  
+  .achievements ul li {
+    color: white; /* Ensures white text */
+    line-height: 1.6; /* Improves readability */
+  }
+  
+  
+  /* Projects */
+  .project {
+    margin-top: 15px;
+  }
+  
+  .project h4 {
+    font-size: 1.1rem;
+    color: #f4f4f4;
+    font-weight: bold;
+  }
+  
+  .project a {
+    color: #020406;
+    text-decoration: none;
+  }
+  
+  .project a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Project Description */
+  .project ul li {
+    color: white; /* Makes project description points white */
+    line-height: 1.6; /* Improves readability */
+  }
+  
+  
+  .project a {
+    color: white; /* Makes GitHub and Live Demo links white */
+    text-decoration: none; /* Removes underline for a cleaner look */
+  }
+  
+  .project a:hover {
+    text-decoration: underline; /* Optional: Underline on hover for better UX */
+  }
+  
+  
+  /* Bottom Line */
+  .bottomLine {
+    margin-top: 25px;
+    border: none;
+    border-top: 2px solid #ccc;
+  } 
